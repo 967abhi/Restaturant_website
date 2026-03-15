@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del \"D:\\\\restaturant food\\\\food-app\\\\client\\\\tailwind.config.js\")",
+      "Bash(npx vite build)"
+    ]
+  }
+}
