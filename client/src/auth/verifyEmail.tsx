@@ -7,7 +7,7 @@ const VerifyEmail = () => {
   const [otp, setOtp] = useState<string[]>(["", "", "", "", "", ""]);
   const inputRef = useRef<(HTMLInputElement | null)[]>([]);
   const loading = false;
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
   const handleChange = (index: number, value: string) => {
     if (/^[a-zA-Z0-9]$/.test(value) || value === "") {
       const newOtp = [...otp];
@@ -53,7 +53,9 @@ const VerifyEmail = () => {
             {otp.map((letter: string, idx: number) => (
               <Input
                 key={idx}
-                ref={(element) => { inputRef.current[idx] = element; }}
+                ref={(element) => {
+                  inputRef.current[idx] = element;
+                }}
                 type="text"
                 maxLength={1}
                 value={letter}
@@ -76,7 +78,7 @@ const VerifyEmail = () => {
               Please wait
             </Button>
           ) : (
-            <Button className="bg-orange hover:bg-hoverOrange mt-6 w-full">
+            <Button className="bg-orange  hover:bg-hoverOrange mt-6 w-full p-2">
               Verify
             </Button>
           )}
