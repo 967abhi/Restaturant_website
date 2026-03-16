@@ -3,6 +3,9 @@ import "./App.css";
 import Login from "./auth/login";
 import Mainlayout from "./mainlayout";
 import Singup from "./auth/Singup";
+import ForgotPassword from "./auth/forgotpassword";
+import ResetPassword from "./auth/ResetPassword";
+import VerifyEmail from "./auth/verifyEmail";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +18,18 @@ const appRouter = createBrowserRouter([
   {
     path: "/signup",
     element: <Singup />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
+  },
+  {
+    path: "/verify-email",
+    element: <VerifyEmail />,
   },
 ]);
 function App() {
